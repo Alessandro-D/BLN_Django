@@ -1,6 +1,6 @@
 ## REQUIREMENTS
-### Python
-### Pip
+### * Python
+### * Pip
 
 ## STATIC FILES LOCATIONS
 * Html files can be found in `bln/store/templates`
