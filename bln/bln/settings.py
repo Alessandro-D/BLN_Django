@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'store',
+    'paypal.standard.ipn',
+    'payments',
 ]
 
 MIDDLEWARE = [
@@ -120,3 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+PAYPAL_RECEIVER_EMAIL = 'test@email.com '
+# PAYPAL_TEST = True
+
+HOST = "localhost"
