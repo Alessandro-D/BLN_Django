@@ -1,0 +1,1 @@
+.\env\Scripts\activate && python .\bln\manage.py runserver

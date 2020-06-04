@@ -7,6 +7,10 @@
 * Run install.sh to create virtualenv and install dependencies
 * Run run.sh to start the server on port 8000
 
+### On Windows
+* Run install.bat
+* Run run.bat
+
 ## STATIC FILES LOCATIONS
 * Html files can be found in `bln/store/templates`
 * CSS files can be found in `bln/store/static/css`

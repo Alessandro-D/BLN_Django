@@ -1,0 +1,1 @@
+python -m virtualenv env && .\env\Scripts\activate && pip install -r requirements.txt && python ./bln/manage.py migrate
