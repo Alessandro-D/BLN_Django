@@ -5,16 +5,20 @@ body{
 td{
     border:1px solid black;
     margin:0;
-    padding:0;
-    padding-left: 20px;
+    /* padding:0;
+    padding-left: 20px; */
+    padding: .5em 1em;
 }
 
 table{
     border:1px solid black;
+    width:500px;
 }
 
 th{
     border:1px solid black;
+    background-color: #cbcbcb;
+    font-weight: bold;
 }
 
 tr{

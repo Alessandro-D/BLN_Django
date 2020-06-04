@@ -22,9 +22,12 @@ def index(request):
         "notify_url": 'http://{}{}'.format(HOST, reverse('paypal-ipn')),
         "return": 'http://{}{}'.format(HOST, reverse('index')),
         "cancel_return": 'http://{}{}'.format(HOST, reverse('index')),
-        "byond_key": bkey,  # Custom command to correlate to some function later (optional)
+        "custom": bkey,  # Custom command to correlate to some function later (optional)
     }
-    # Create the instance.
+
+    # dict1, dict2 = dict(paypal_dict), dict(paypal_dict)
+
+    # Create the instances.
     form = PayPalPaymentsForm(initial=paypal_dict)
 
     # Render the HTML template index.html with the data in the context variable
