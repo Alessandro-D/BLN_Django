@@ -18,7 +18,7 @@ def index(request):
         "business": PAYPAL_RECEIVER_EMAIL,
         "amount": "7.00",
         "item_name": "Subscription",
-        "invoice": string(random.randint(0,9999999999999)),
+        "invoice": str(random.randint(0,9999999999999)),
         "currency_code" : "USD",
         "notify_url": 'http://{}{}'.format(HOST, reverse('paypal-ipn')),
         "return": 'http://{}{}'.format(HOST, reverse('index')),
