@@ -2,9 +2,13 @@
 
 {% block content %}
 
-  <h1>BLN Store</h1>
-  <p>Welcome to the BLN store {{bkey}}!</p>
-   <table cellspacing="0">
+  <div class="title" style="background-color:#949494;padding:1px 10px 20px 20px;margin:0;border:1px solid black">
+    <h1>Las Noches Store</h1>
+  </div>
+  <p style="background-color:#eaeaea;margin:0;height:10px;padding:15px 40px;padding-right:0;border-bottom:1px solid grey">Welcome to the BLN store <b>{{bkey}}</b>!</p>
+  {{ ppurl }}
+   <table cellspacing="0" style="margin:30px">
+   {% comment %} <br/> {% endcomment %}
    <thead>
       <tr>
         <th>Item</th>
@@ -14,16 +18,28 @@
    </thead>
   <tr>
     <td>1 Month Subscription</td>
-    <td>$9.00</td>
+    <td>$7.00</td>
     <td>
-      {{ subForm2.render }}
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="VEEY3V6D42YDC">
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribe_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
     </td>
   </tr>
   <tr>
-    <td>3 Months Subscription</td>
-    <td>$27.00</td>
+    <td>5 Credits</td>
+    <td>$5.00</td>
     <td>
-      {{ subForm2.render }}
+      {{ btn5c.render }}
+    </td>
+  </tr>
+  <tr>
+    <td>10 Credits</td>
+    <td>$10.00</td>
+    <td>
+      {{ btn10c.render }}
     </td>
   </tr>
 </table> 

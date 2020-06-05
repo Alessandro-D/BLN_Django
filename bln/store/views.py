@@ -18,7 +18,7 @@ def index(request):
         "business": PAYPAL_RECEIVER_EMAIL,
         "amount": "7.00",
         "item_name": "Subscription",
-        "invoice": str(random.randint(0,9999999999999)),
+        "invoice": str(random.randint(0,999999)),
         "currency_code" : "USD",
         "notify_url": 'http://{}{}'.format(HOST, reverse('paypal-ipn')),
         "return": 'http://{}{}'.format(HOST, reverse('index')),
@@ -26,18 +26,22 @@ def index(request):
         "custom": bkey,  # Custom command to correlate to some function later (optional)
     }
 
-    dict1, dict2 = dict(paypal_dict), dict(paypal_dict)
+    ppurl = 'http://{}{}'.format(HOST, reverse('paypal-ipn'))
+
+    dict1 = dict(paypal_dict)
+    dict2 = dict(paypal_dict)
 
     # Create the instances.
-    form = PayPalPaymentsForm(initial=paypal_dict)
+    btn5c = PayPalPaymentsForm(initial=dict1)
 
-    dict2["amount"] = "27.00"
-    form2 = PayPalPaymentsForm(initial=dict2)
+    dict2["amount"] = "10.00"
+    btn10c = PayPalPaymentsForm(initial=dict2)
 
     # Render the HTML template index.html with the data in the context variable
     context={
-        "subForm1" : form,
-        "subForm2" : form2,
+        "btn5c" : btn5c,
+        "btn10c" : btn10c,
         "bkey" : bkey,
+        # "ppurl" : ppurl,
     }
     return render(request, 'index.html', context=context)

@@ -123,7 +123,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-PAYPAL_RECEIVER_EMAIL = 'sb-7voet1276150@business.example.com'
-PAYPAL_TEST = True
+PAYPAL_RECEIVER_EMAIL = 'bustercannon_50@hotmail.com'
+# PAYPAL_TEST = True
 
 HOST = "74.91.119.7:13371"
