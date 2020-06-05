@@ -25,7 +25,7 @@ SECRET_KEY = 'ft13mzxb-!56=zh1*vib^h7)d)zv4fw@sh!k#gyyp3h)u)k#4+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['74.91.119.7']
+ALLOWED_HOSTS = ['74.91.119.7', 'localhost']
 
 
 # Application definition
@@ -126,4 +126,4 @@ STATIC_URL = '/static/'
 PAYPAL_RECEIVER_EMAIL = 'sb-7voet1276150@business.example.com'
 PAYPAL_TEST = True
 
-HOST = "localhost"
+HOST = "74.91.119.7:13371"
