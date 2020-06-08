@@ -16,8 +16,13 @@ def index(request):
     # What you want the Paypal button to do.
     paypal_dict = {
         "business": PAYPAL_RECEIVER_EMAIL,
-        "amount": "7.00",
-        "item_name": "Subscription",
+        "cmd": "_xclick-subscriptions",
+        "a3": "7.00",
+        "p3": "1",
+        "t3": "M",
+        "src": "1",
+        "sra": "1",
+        "product_name": "Full Access",
         "invoice": str(random.randint(0,999999)),
         "currency_code" : "USD",
         "notify_url": 'http://{}{}'.format(HOST, reverse('paypal-ipn')),
@@ -32,6 +37,7 @@ def index(request):
     dict2 = dict(paypal_dict)
 
     # Create the instances.
+    dict1["amount"] = "7.00"
     btn5c = PayPalPaymentsForm(initial=dict1)
 
     dict2["amount"] = "10.00"

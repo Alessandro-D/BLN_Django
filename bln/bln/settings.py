@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['74.91.119.7', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    'django_mysql',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -79,8 +80,12 @@ WSGI_APPLICATION = 'bln.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'DB_NAME',
+        'USER': 'DB_USER',
+        'PASSWORD': 'DB_PASSWORD',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
 
@@ -124,6 +129,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 PAYPAL_RECEIVER_EMAIL = 'bustercannon_50@hotmail.com'
-# PAYPAL_TEST = True
+PAYPAL_TEST = False
 
 HOST = "74.91.119.7:13371"
