@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ft13mzxb-!56=zh1*vib^h7)d)zv4fw@sh!k#gyyp3h)u)k#4+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['74.91.119.7', 'localhost']
 
@@ -81,9 +81,9 @@ WSGI_APPLICATION = 'bln.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'DB_NAME',
-        'USER': 'DB_USER',
-        'PASSWORD': 'DB_PASSWORD',
+        'NAME': 'bln',
+        'USER': 'root',
+        'PASSWORD': 'lasnoches',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
@@ -132,3 +132,4 @@ PAYPAL_RECEIVER_EMAIL = 'bustercannon_50@hotmail.com'
 PAYPAL_TEST = False
 
 HOST = "74.91.119.7:13371"
+
